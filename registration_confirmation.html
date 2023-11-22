@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Confirmation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="confirmation">
+        <h2>Registration Confirmation</h2>
+        <p>Name: <span id="confirm-name"></span></p>
+        <p>Email: <span id="confirm-email"></span></p>
+        <p>Mobile No: <span id="confirm-mobile"></span></p>
+        <p>College Name: <span id="confirm-college"></span></p>
+        <br>
+        <p>Click <a href="index.html">here</a> to register another user.</p>
+    </div>
+
+    <script >
+    document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    document.getElementById('confirm-name').textContent = urlParams.get('name');
+    document.getElementById('confirm-email').textContent = urlParams.get('email');
+    document.getElementById('confirm-mobile').textContent = urlParams.get('mobile');
+    document.getElementById('confirm-college').textContent = urlParams.get('college');
+    });</script>
+</body>
+</html>
